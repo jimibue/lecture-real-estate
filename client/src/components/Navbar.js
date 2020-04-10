@@ -15,6 +15,7 @@ class Navbar extends React.Component {
             name='logout'
             onClick={() => handleLogout(this.props.history)}
           />
+          
         </Menu.Menu>
       )
     } else {
@@ -26,7 +27,9 @@ class Navbar extends React.Component {
               name='login'
               active={location.pathname === '/login'}
             />
+            
           </Link>
+          
           <Link to='/register'>
             <Menu.Item
               id='register'
@@ -48,6 +51,34 @@ class Navbar extends React.Component {
               name='home'
               id='home'
               active={this.props.location.pathname === '/'}
+            />
+          </Link>
+          <Link to='/available'>
+            <Menu.Item
+              name='available'
+              id='available'
+              active={this.props.location.pathname === '/available'}
+            />
+          </Link>
+          <Link to='/cities'>
+            <Menu.Item
+              name='cities'
+              id='cities'
+              active={this.props.location.pathname === '/cities'}
+            />
+          </Link>
+          <Link to='/findHomes'>
+            <Menu.Item
+              name='homes'
+              id='homes'
+              active={this.props.location.pathname === '/findHomes'}
+            />
+          </Link>
+          <Link to='/cost'>
+            <Menu.Item
+              name='cost'
+              id='cost'
+              active={this.props.location.pathname === '/cost'}
             />
           </Link>
           { this.rightNavItems() }
